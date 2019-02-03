@@ -2,11 +2,12 @@ package com.sociafy.social.entities;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "\"User\"")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class UserEntity {
+public class UserEntity implements Serializable {
 
     @Id
     @Column(name = "Id")

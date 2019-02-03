@@ -3,12 +3,13 @@ package com.sociafy.social.entities;
 import com.sociafy.social.domain.Profile;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
 @Table(name = "Person")
-public class PersonEntity extends UserEntity {
+public class PersonEntity extends UserEntity implements Serializable {
 
     @Id
     @Column(name = "id")

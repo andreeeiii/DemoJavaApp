@@ -3,10 +3,11 @@ package com.sociafy.social.entities;
 import com.sociafy.social.domain.Person;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "\"Profile\"")
-public class ProfileEntity {
+public class ProfileEntity implements Serializable {
 
     @Id
     @Column(name = "id")

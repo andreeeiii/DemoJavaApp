@@ -1,4 +1,4 @@
 package com.sociafy.social.repository;
 
-public class EventRepository {
+public interface EventRepository {
 }
