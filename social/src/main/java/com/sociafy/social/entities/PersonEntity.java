@@ -1,6 +1,5 @@
 package com.sociafy.social.entities;
 
-import com.sociafy.social.domain.Profile;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,10 +15,9 @@ public class PersonEntity extends UserEntity implements Serializable {
     @GeneratedValue
     private String id;
 
-    @Column(name = "profile")
     @OneToOne
     @JoinColumn(name = "profile_id", nullable = false)
-    private Profile profile;
+    private ProfileEntity profile;
 
     @Column(name = "creation_date")
     private Date creationDate;
@@ -34,11 +32,11 @@ public class PersonEntity extends UserEntity implements Serializable {
         this.id = id;
     }
 
-    public Profile getProfile() {
+    public ProfileEntity getProfile() {
         return profile;
     }
 
-    public void setProfile(Profile profile) {
+    public void setProfile(ProfileEntity profile) {
         this.profile = profile;
     }
 

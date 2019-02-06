@@ -8,6 +8,15 @@ public class User {
     private String password;
     private Boolean isAdmin;
 
+
+    public User() {}
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+        this.isAdmin = false;
+    }
+
     public String getUsername() {
         return username;
     }

@@ -23,6 +23,9 @@ public class UserEntity implements Serializable {
     @Column(name = "is_admin")
     private Boolean isAdmin;
 
+    @Transient
+    private String passwordConfirm;
+
     public String getId() {
         return id;
     }
@@ -53,5 +56,13 @@ public class UserEntity implements Serializable {
 
     public void setAdmin(Boolean admin) {
         isAdmin = admin;
+    }
+
+    public String getPasswordConfirm() {
+        return passwordConfirm;
+    }
+
+    public void setPasswordConfirm(String passwordConfirm) {
+        this.passwordConfirm = passwordConfirm;
     }
 }

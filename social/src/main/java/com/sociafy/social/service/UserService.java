@@ -1,8 +1,10 @@
 package com.sociafy.social.service;
 
-import com.sociafy.social.entities.UserEntity;
+import com.sociafy.social.domain.User;
 
 public interface UserService {
 
-    public boolean saveUser(UserEntity userEntity);
+    public boolean saveUser(User user);
+
+    public User getUserByUsername(String username);
 }
